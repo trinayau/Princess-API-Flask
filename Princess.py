@@ -3,7 +3,8 @@ class Princess():
   fake_database = [("Jasmine", "Agrabah"),
                  ("Ariel", "Atlantis"),
                  ("Belle", "France"),
-                 ("Mulan", "China")]
+                 ("Mulan", "China"),
+                 ("Mononoke", "Ancient Forest")]
 
   @staticmethod
   def static_all():
