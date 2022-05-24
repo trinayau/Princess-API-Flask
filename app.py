@@ -28,7 +28,7 @@ def create_bee():
         "message": "We definitely really created your bee."
     }, 201
 
-@app.route("/bee/all", methods=["GET"])
+@app.route("/princesses/all", methods=["GET"])
 def all_bees():
     if request.method == "GET":
         return jsonify([{
@@ -40,7 +40,7 @@ def all_bees():
             "age": 70
         }])
 
-@app.route("/bee/<int:id>", methods=["GET", "DELETE"]) #Flask lets us do type requirements
+@app.route("/princesses/<int:id>", methods=["GET", "DELETE"]) #Flask lets us do type requirements
 def interact_with_bee(id):
     chosen_name = choice(["Beetholomew", "Beeatrice", "Beenedict", "Beeyonce", "Beenard", "Beelinda", "Beenjamin"])
      
@@ -48,20 +48,20 @@ def interact_with_bee(id):
         return jsonify({
         "id": id,
         "name": chosen_name,
-        "age": "no more than 30 days"
+        "age": "never ask a lady's age"
         }), 200
 
     elif request.method == "DELETE":
         return jsonify({
             "success": True,
-            "message": f"{chosen_name} is dead. Weep for them."
+            "message": f"{chosen_name} she lost her royalty."
         }), 201
 
 @app.errorhandler(exceptions.NotFound)
 def page_not_found(err):
     return render_template("404.html", data={
         "error": err,
-        "message": "you should be very ashamed 🐝💥"
+        "message": "No, Shrek did not kidnap them, you are just terrible at finding people, or websites"
     })
 
 if __name__ == "__main__":
