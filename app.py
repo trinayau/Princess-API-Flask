@@ -2,6 +2,7 @@ from random import choice
 from flask import Flask, jsonify, render_template, url_for, request
 from flask_cors import CORS
 from werkzeug import exceptions
+from princess import Princess
 
 app = Flask(__name__) # Boilerplate
 CORS(app)
@@ -31,14 +32,15 @@ def create_bee():
 @app.route("/princesses/all", methods=["GET"])
 def all_bees():
     if request.method == "GET":
-        return jsonify([{
-            "name": "Beep Beep",
-            "age": 20
-        }, 
-        {
-            "name": "Killer Bee",
-            "age": 70
-        }])
+        return jsonify(Princess.fake_database)
+        # return jsonify([{
+        #     "name": "Beep Beep",
+        #     "age": 20
+        # }, 
+        # {
+        #     "name": "Killer Bee",
+        #     "age": 70
+        # }])
 
 @app.route("/princesses/<int:id>", methods=["GET", "DELETE"]) #Flask lets us do type requirements
 def interact_with_bee(id):

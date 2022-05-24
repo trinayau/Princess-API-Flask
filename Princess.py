@@ -6,9 +6,9 @@ class Princess():
                  ("Mulan", "China"),
                  ("Mononoke", "Ancient Forest")]
 
-  @staticmethod
-  def static_all():
-    return [Princess(*p) for p in Princess.fake_database]
+#   @staticmethod
+#   def static_all():
+#     return [Princess(*p) for p in Princess.fake_database]
   
   @classmethod
   def all(cls):
