@@ -9,7 +9,9 @@ class Princess():
 #   @staticmethod
 #   def static_all():
 #     return [Princess(*p) for p in Princess.fake_database]
-  
+#   if __name__ == "__main__":
+#     app.run(debug=True)
+
   @classmethod
   def all(cls):
     # ...
@@ -37,8 +39,5 @@ class Princess():
   def __repr__(self):
     return f"Princess {self.name}"
 
-print(Princess.all())
-m = Princess.get_one_by_name("Mulan")
-m.transform("frog")
-print(m)
-print(m.shape)
+# if __name__ == "__main__":
+#     app.run(debug=True)
