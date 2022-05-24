@@ -1,0 +1,27 @@
+html {
+    background-color: #ffe100;
+    font-family: monospace;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1{
+    font-size: 50px;
+}
+
+a{
+    font-size: 40px;
+    transition: all ease-in-out 200ms;
+}
+
+a:visited{
+    color: #907f00
+}
+
+a:hover{
+    color:#ffc548
+}
+
+p{
+    font-size: 25px;
+}
